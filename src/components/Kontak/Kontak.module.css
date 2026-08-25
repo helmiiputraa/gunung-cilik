@@ -1,0 +1,194 @@
+/* ============================================================
+   Kontak Section Styles
+   ============================================================ */
+
+.kontak {
+  background: var(--bg-tertiary);
+}
+
+.kontakWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.kontakInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.kontakInfoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.kontakInfoIcon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.kontakInfoItem:hover .kontakInfoIcon {
+  background: var(--primary);
+  color: #fff;
+}
+
+.kontakInfoLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.kontakInfoValue {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.kontakSocial {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.kontakSocialLink {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.kontakSocialLink:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Form */
+.kontakForm {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 36px;
+}
+
+.formTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.formGroup textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.formSubmit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.formSubmit:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Map */
+.kontakMap {
+  margin-top: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.kontakMap iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+[data-theme='dark'] .kontakMap iframe {
+  filter: invert(0.9) hue-rotate(180deg) contrast(0.9) saturate(0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .kontakWrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .kontakForm {
+    padding: 24px;
+  }
+}

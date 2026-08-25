@@ -1,0 +1,155 @@
+/* ============================================================
+   Lokasi Section Styles
+   ============================================================ */
+
+.lokasi {
+  background: var(--bg-primary);
+}
+
+.lokasiContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+/* Map Container */
+.lokasiMap {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  min-height: 450px;
+  position: relative;
+}
+
+.lokasiMap iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  border: 0;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+[data-theme='dark'] .lokasiMap iframe {
+  filter: invert(0.9) hue-rotate(180deg) contrast(0.9) saturate(0.3);
+}
+
+/* Info Panel */
+.lokasiInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.lokasiInfoCard {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lokasiInfoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.lokasiInfoCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.lokasiInfoCardIcon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.lokasiInfoCard:hover .lokasiInfoCardIcon {
+  background: var(--primary);
+  color: #fff;
+}
+
+.lokasiInfoCardTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lokasiInfoCardText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-left: 62px;
+}
+
+/* CTA Button */
+.lokasiCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.lokasiCta:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(var(--primary-rgb), 0.35);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .lokasiContent {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .lokasiMap {
+    min-height: 350px;
+  }
+
+  .lokasiMap iframe {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lokasiMap {
+    min-height: 280px;
+  }
+
+  .lokasiMap iframe {
+    min-height: 280px;
+  }
+
+  .lokasiInfoCard {
+    padding: 20px;
+  }
+
+  .lokasiInfoCardText {
+    margin-left: 0;
+  }
+}

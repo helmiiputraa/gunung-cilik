@@ -1,0 +1,121 @@
+/* ============================================================
+   Berita Section Styles
+   ============================================================ */
+
+.berita {
+  background: var(--bg-primary);
+}
+
+.beritaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.beritaCard {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.beritaCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.beritaThumb {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beritaThumbIcon {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.beritaCategory {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.beritaBody {
+  padding: 24px;
+}
+
+.beritaDate {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.beritaTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.beritaCard:hover .beritaTitle {
+  color: var(--primary);
+}
+
+.beritaExcerpt {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.beritaReadMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  transition: gap 0.3s ease;
+}
+
+.beritaReadMore:hover {
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .beritaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .beritaGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .beritaThumb {
+    height: 160px;
+  }
+}

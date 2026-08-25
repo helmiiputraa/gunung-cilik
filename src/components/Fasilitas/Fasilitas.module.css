@@ -1,0 +1,174 @@
+/* ============================================================
+   Fasilitas & Harga Section Styles
+   ============================================================ */
+
+.fasilitas {
+  background: var(--bg-primary);
+}
+
+/* ---- Pricing Cards ---- */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.pricingCard {
+  position: relative;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.pricingCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 20px 20px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.pricingCard:hover::before {
+  opacity: 1;
+}
+
+.pricingIcon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.pricingKategori {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.pricingHarga {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.pricingKeterangan {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---- Facilities Grid ---- */
+.facilitiesLabel {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.facilitiesLabelText {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--primary);
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.facilityCard {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 36px 28px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.facilityCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.facilityIconWrapper {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.facilityCard:hover .facilityIconWrapper {
+  background: var(--primary);
+  color: #fff;
+}
+
+.facilityTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.facilityDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricingGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facilitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricingGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .pricingCard {
+    padding: 24px 16px;
+  }
+
+  .pricingHarga {
+    font-size: 1.3rem;
+  }
+
+  .facilitiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
