@@ -1,6 +1,6 @@
 import { FiMapPin, FiCamera, FiStar } from 'react-icons/fi';
 import { GiCampingTent, GiMeal } from 'react-icons/gi';
-import { FaParking, FaRestroom, FaMosque } from 'react-icons/fa';
+import { FaParking, FaRestroom, FaMosque, FaBolt } from 'react-icons/fa';
 import { hargaTiket, fasilitasList } from '../../data/content';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './Fasilitas.module.css';
@@ -12,6 +12,7 @@ const iconMap = {
   food: <GiMeal />,
   photo: <FiCamera />,
   mosque: <FaMosque />,
+  electricity: <FaBolt />,
 };
 
 export default function Fasilitas() {

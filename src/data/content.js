@@ -62,8 +62,8 @@ export const fasilitasList = [
   {
     id: 1,
     icon: 'parking',
-    title: 'Area Parkir Luas',
-    description: 'Tempat parkir yang luas dan aman untuk motor, mobil, hingga camper van.',
+    title: 'Area Parkir Gratis',
+    description: 'Tempat parkir yang luas dan aman untuk motor, mobil, hingga camper van. Gratis tanpa biaya parkir.',
   },
   {
     id: 2,
@@ -94,6 +94,12 @@ export const fasilitasList = [
     icon: 'mosque',
     title: 'Musala',
     description: 'Tersedia fasilitas musala yang bersih dan nyaman untuk beribadah.',
+  },
+  {
+    id: 7,
+    icon: 'electricity',
+    title: 'Fasilitas Listrik',
+    description: 'Tersedia fasilitas listrik untuk kebutuhan pengunjung selama berwisata dan berkemah.',
   },
 ];
 
