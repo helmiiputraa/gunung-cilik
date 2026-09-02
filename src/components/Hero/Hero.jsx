@@ -33,7 +33,7 @@ export default function Hero() {
 
         <div className={styles.heroStats}>
           <div className={styles.heroStat}>
-            <div className={styles.heroStatNumber}>500+</div>
+            <div className={styles.heroStatNumber}>1000+</div>
             <div className={styles.heroStatLabel}>Pengunjung / Bulan</div>
           </div>
           <div className={styles.heroStat}>

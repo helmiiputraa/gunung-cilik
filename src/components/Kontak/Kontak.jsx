@@ -1,5 +1,5 @@
 import { FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
-import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { siteConfig } from '../../data/content';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './Kontak.module.css';
@@ -68,15 +68,7 @@ export default function Kontak() {
               >
                 <FaInstagram />
               </a>
-              <a
-                className={styles.kontakSocialLink}
-                href={siteConfig.facebookUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebookF />
-              </a>
+
               <a
                 className={styles.kontakSocialLink}
                 href={siteConfig.whatsappUrl}
